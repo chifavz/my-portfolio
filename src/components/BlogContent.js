@@ -3,8 +3,8 @@ import Blog from './Blog';  // Update the path accordingly
 
 const BlogContent = () => {
   const blogPost = {
-    title: "How Web Development Has Helped Humanity",
-    author: "Your Name",
+    title: "Web technology in real world solutions",
+    author: "Chifavz",
     date: "2023-01-01",
     content: `
       <p>
