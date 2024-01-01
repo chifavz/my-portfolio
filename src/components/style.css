@@ -1,29 +1,75 @@
-/* style.css */
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset styles for better cross-browser consistency */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
-
-section {
-    padding: 2em;
-    text-align: center;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif; /* Use the 'Roboto' font or your preferred font */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+    font-size: 16px; /* Default font size */
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #000; /* Black background for header */
+    color: #fff; /* White text color for header */
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5em; /* Larger header font size */
+  }
+  
+  header p {
+    font-size: 1.5em; /* Larger paragraph font size */
+  }
+  
+  /* Section styles */
+  section {
+    padding: 20px;
+  }
+  
+  section h2 {
+    color: #000; /* Black text color for section headings */
+    font-size: 1.8em; /* Larger section heading font size */
+  }
+  
+  /* List styles */
+  ul, ol {
+    margin-bottom: 20px;
+  }
+  
+  ul li a {
+    color: #000; /* Black text color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.2em; /* Larger link font size */
+  }
+  
+  ul li a:hover {
+    color: #888; /* Gray text color on hover */
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #000; /* Black background for footer */
+    color: #fff; /* White text color for footer */
+    padding: 20px;
+  }
+  
+  /* Footer link styles */
+  footer a {
+    color: #fff; /* White text color for footer links */
+    text-decoration: none;
+    font-size: 1.2em; /* Larger footer link font size */
+  }
+  
+  footer a:hover {
+    color: #888; /* Gray text color on hover for footer links */
+  }
+  

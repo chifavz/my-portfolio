@@ -1,18 +1,26 @@
-// components/Navbar.js
+// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const navStyle = {
+    display: 'flex',
+    justifyContent: 'space-around',
+    padding: '10px',
+    background: '#333',
+    color: '#',
+  };
+
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
+    <nav style={navStyle}>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/contact">Contact</Link>
+      <Link to="/blog">Blog Post</Link>
     </nav>
   );
 };
 
 export default Navbar;
+
