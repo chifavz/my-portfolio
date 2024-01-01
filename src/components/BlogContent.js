@@ -3,16 +3,65 @@ import Blog from './Blog';  // Update the path accordingly
 
 const BlogContent = () => {
   const blogPost = {
-    title: "Web technology in real world solutions",
+    title: "Technology in Real-World Solutions",
     author: "Chifavz",
-    date: "2023-01-01",
+    date: "2023-31-12",
     content: `
+    <article>
+
+
+    <section>
+      <h2>E-Commerce and Online Retail</h2>
       <p>
-        The advent of web development has transformed the way we live and interact with the world. In this blog post, we explore the positive impact of web development on humanity and how it has contributed to various aspects of our lives.
+        Web technology has transformed the retail industry by enabling the creation of robust e-commerce platforms...
       </p>
+    </section>
+
+    <section>
+      <h2>Education and E-Learning</h2>
       <p>
-        From enhancing communication to providing valuable resources and services, web development has played a crucial role in shaping the digital landscape. We'll delve into specific examples and discuss the future possibilities that web development brings to the table.
+        The education sector has witnessed a significant shift with the integration of web technology...
       </p>
+    </section>
+
+    <section>
+      <h2>Healthcare and Telemedicine</h2>
+      <p>
+        Web technology has revolutionized healthcare through the implementation of telemedicine solutions...
+      </p>
+    </section>
+
+    <section>
+      <h2>Finance and Fintech</h2>
+      <p>
+        The financial sector has embraced web technology to enhance banking services and financial transactions...
+      </p>
+    </section>
+
+    <section>
+      <h2>Smart Cities and IoT Integration</h2>
+      <p>
+        Web technology is a key enabler in the development of smart cities...
+      </p>
+    </section>
+
+    <section>
+      <h2>Entertainment and Streaming Services</h2>
+      <p>
+        The entertainment industry relies heavily on web technology for content delivery...
+      </p>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        Web technology is not just a tool for creating websites; it's a powerful force driving innovation and transforming industries...
+      </p>
+    </section>
+  </article>
+
+
+
     `,
     tags: ["React", "Web Development"],
     comments: [

@@ -4,7 +4,7 @@ import './style.css';
 
 const BlogLayout = () => (
   <div>
-    <h1>Blog Layout</h1>
+    <h1>Blog Post</h1>
     <BlogContent />
   </div>
 );
