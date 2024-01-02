@@ -6,7 +6,7 @@ const Project = () => {
   const projectData = {
     title: 'Sample Project',
     images: [
-      { src: './Screenshot1.png', alt: 'Screenshot 1', link: 'https://mellow-snickerdoodle-01057f.netlify.app' },
+      { src: './Screenshot1.png', alt: 'Screenshot 1', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
       { src: './Screenshot2.png', alt: 'Screenshot 2', link: 'https://eclectic-gumption-1d4c5d.netlify.app' },
       { src: './Screenshot3.png', alt: 'Screenshot 3', link: 'https://melodious-cajeta-bad382.netlify.app' },
     ],
