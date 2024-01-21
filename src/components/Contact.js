@@ -19,7 +19,7 @@ const Contact = () => {
 
         try {
             // Make a POST request to the Netlify Function endpoint
-            const response = await axios.post('/.netlify/functions/sendEmail', formData);
+            const response = await axios.post('./netlify/functions/sendEmail', formData);
 
             // Check the response and handle accordingly
             if (response.status === 200) {
