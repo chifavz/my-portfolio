@@ -19,7 +19,7 @@ const Contact = () => {
 
         try {
             // Make a POST request to the Netlify Function endpoint
-            const response = await axios.post('/.netlify/functions/sendEmail', formData);
+            const response = await axios.post('https://aquamarine-dasik-1dd582.netlify.app/.netlify/functions/sendEmail', formData);
 
             // Check the response and handle accordingly
             if (response.status === 200) {
@@ -44,7 +44,8 @@ const Contact = () => {
             <h2>Contact Me</h2>
 
             <section>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} >
+
                     {/* Name input */}
                     <label htmlFor="name">Name:</label>
                     <input
