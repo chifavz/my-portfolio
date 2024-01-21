@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './style.css';
 
 const Contact = () => {
@@ -7,15 +8,35 @@ const Contact = () => {
         email: '',
         message: '',
     });
+    const [submissionStatus, setSubmissionStatus] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic (e.g., send data to a server or display a thank you message)
-        console.log('Form submitted:', formData);
+
+        try {
+            // Make a POST request to the Netlify Function endpoint
+            const response = await axios.post('/.netlify/functions/sendEmail', formData);
+
+            // Check the response and handle accordingly
+            if (response.status === 200) {
+                setSubmissionStatus('success');
+                // Optionally, you can reset the form after a successful submission
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: '',
+                });
+            } else {
+                setSubmissionStatus('error');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setSubmissionStatus('error');
+        }
     };
 
     return (
@@ -24,6 +45,7 @@ const Contact = () => {
 
             <section>
                 <form onSubmit={handleSubmit}>
+                    {/* Name input */}
                     <label htmlFor="name">Name:</label>
                     <input
                         type="text"
@@ -34,6 +56,7 @@ const Contact = () => {
                         required
                     />
 
+                    {/* Email input */}
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"
@@ -44,6 +67,7 @@ const Contact = () => {
                         required
                     />
 
+                    {/* Message textarea */}
                     <label htmlFor="message">Message:</label>
                     <textarea
                         id="message"
@@ -54,7 +78,16 @@ const Contact = () => {
                         required
                     ></textarea>
 
+                    {/* Submit button */}
                     <button type="submit">Submit</button>
+
+                    {/* Submission status message */}
+                    {submissionStatus === 'success' && (
+                        <div className="success-message">Form submitted successfully!</div>
+                    )}
+                    {submissionStatus === 'error' && (
+                        <div className="error-message">Error submitting form. Please try again later.</div>
+                    )}
                 </form>
             </section>
         </div>
