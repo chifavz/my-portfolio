@@ -1,23 +1,23 @@
 // Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 const Navbar = () => {
-  const navStyle = {
-    display: 'flex',
-    justifyContent: 'space-around',
-    padding: '10px',
-    background: '#333',
-    color: '#',
-  };
-
   return (
-    <nav style={navStyle}>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/contact">Contact</Link>
-      <Link to="/blog">Blog Post</Link>
+    <nav className="navbar">
+      <div className="nav-container">
+        <div className="nav-brand">
+          <Link to="/">chifavz</Link>
+        </div>
+        <div className="nav-links">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/projects" className="nav-link">Projects</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+          <Link to="/blog" className="nav-link">Blog</Link>
+        </div>
+      </div>
     </nav>
   );
 };
