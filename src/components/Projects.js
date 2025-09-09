@@ -2,36 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-
-const Project = () => {
-  // Assuming you have some data for the project
-  const projectData = {
-    title: 'My Projects',
-    images: [
-      { src: './Screenshot1.png', alt: 'Modern Dashboard', title: 'Dashboard App', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
-      { src: './Screenshot2.png', alt: 'E-commerce Platform', title: 'E-commerce Site', link: 'https://eclectic-gumption-1d4c5d.netlify.app' },
-      { src: './Screenshot3.png', alt: 'Portfolio Website', title: 'Creative Portfolio', link: 'https://melodious-cajeta-bad382.netlify.app' },
-    ],
-    projectLink: 'https://melodious-cajeta-bad382.netlify.app',
-  };
-
-  return (
-    <div>
-      <h2>{projectData.title}</h2>
-
-      <div className="projects-grid">
-        {projectData.images.map((project, index) => (
-          <div key={index} className="project-item">
-            <h3>{project.title}</h3>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <img src={project.src} alt={project.alt} />
-            </a>
-            <p>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                View Live Project →
-              </a>
-            </p>
-
 const Projects = () => {
   // Sample project data - in a real app this would come from an API or state management
   const [projects] = useState([
@@ -50,6 +20,11 @@ const Projects = () => {
       githubUrl: 'https://github.com/chifavz/sample-project'
     }
   ]);
+
+  // Project data for featured section
+  const projectData = {
+    projectLink: 'https://melodious-cajeta-bad382.netlify.app',
+  };
 
   return (
     <div>
