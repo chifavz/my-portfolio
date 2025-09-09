@@ -2,6 +2,28 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Portfolio Setup and Configuration
+
+### Environment Variables Setup
+
+For the contact form to work properly, you need to set up environment variables:
+
+1. Copy `.env.example` to `.env`
+2. Fill in your Gmail credentials:
+   - `EMAIL_USER`: Your Gmail address
+   - `EMAIL_PASS`: Your Gmail App Password (not your regular password)
+
+**Important**: For Gmail, you must:
+- Enable 2-factor authentication on your Google account
+- Generate an App Password from your Google Account settings
+- Use the App Password (not your regular password) in the `EMAIL_PASS` variable
+
+### Security Notes
+
+- Never commit your `.env` file to version control
+- Use App Passwords instead of regular passwords for email services
+- The `.env` file is already included in `.gitignore` for security
+
 ## Available Scripts
 
 In the project directory, you can run:
