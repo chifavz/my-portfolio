@@ -37,8 +37,6 @@ const Contact = () => {
             console.error('Error submitting form:', error);
             setSubmissionStatus('error');
         }
-        console.log(Contact)
-
     };
 
     return (
