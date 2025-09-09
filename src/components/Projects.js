@@ -4,30 +4,45 @@ import './style.css';
 const Project = () => {
   // Assuming you have some data for the project
   const projectData = {
-    title: 'Sample Project',
+    title: 'My Projects',
     images: [
-      { src: './Screenshot1.png', alt: 'Screenshot 1', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
-      { src: './Screenshot2.png', alt: 'Screenshot 2', link: 'https://eclectic-gumption-1d4c5d.netlify.app' },
-      { src: './Screenshot3.png', alt: 'Screenshot 3', link: 'https://melodious-cajeta-bad382.netlify.app' },
+      { src: './Screenshot1.png', alt: 'Modern Dashboard', title: 'Dashboard App', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
+      { src: './Screenshot2.png', alt: 'E-commerce Platform', title: 'E-commerce Site', link: 'https://eclectic-gumption-1d4c5d.netlify.app' },
+      { src: './Screenshot3.png', alt: 'Portfolio Website', title: 'Creative Portfolio', link: 'https://melodious-cajeta-bad382.netlify.app' },
     ],
     projectLink: 'https://melodious-cajeta-bad382.netlify.app',
   };
 
   return (
     <div>
-      <h1>{projectData.title}</h1>
+      <h2>{projectData.title}</h2>
 
-      {/* Iterate over images and include them with a link */}
-      {projectData.images.map((image, index) => (
-        <a key={index} href={image.link} target="_blank" rel="noopener noreferrer">
-          <img src={image.src} alt={`${projectData.title} - ${index + 1}`} />
-        </a>
-      ))}
+      <div className="projects-grid">
+        {projectData.images.map((project, index) => (
+          <div key={index} className="project-item">
+            <h3>{project.title}</h3>
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <img src={project.src} alt={project.alt} />
+            </a>
+            <p>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
+                View Live Project →
+              </a>
+            </p>
+          </div>
+        ))}
+      </div>
 
-      {/* Provide a link to the project */}
-      <p>
-        Check out the project <a href={projectData.projectLink} target="_blank" rel="noopener noreferrer">here</a>.
-      </p>
+      <section>
+        <h3>Featured Project</h3>
+        <p>
+          Check out my latest project{' '}
+          <a href={projectData.projectLink} target="_blank" rel="noopener noreferrer">
+            here
+          </a>
+          . This project showcases modern web development techniques and responsive design principles.
+        </p>
+      </section>
     </div>
   );
 };
