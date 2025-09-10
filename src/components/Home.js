@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div>
-      <h2>Welcome to My Portfolio</h2>
+      <h2>Chifavz web solutions</h2>
       {/* Add your introduction and any other content here */}
     
       
 
 <header>
-    <h1>Welcome to chifavz's Web Development Hub!</h1>
+    <h1>Web Developer Portfolio – Creative & Innovative Web Solutions by Chifavz</h1>
     <p>Elevate Your Online Presence with Creative and Innovative Web Solutions</p>
 </header>
 

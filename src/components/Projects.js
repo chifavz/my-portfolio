@@ -15,6 +15,9 @@ const Projects = () => {
         { src: './Screenshot1.png', alt: 'Screenshot 1', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
         { src: './Screenshot2.png', alt: 'Screenshot 2', link: 'https://eclectic-gumption-1d4c5d.netlify.app' },
         { src: './Screenshot3.png', alt: 'Screenshot 3', link: 'https://melodious-cajeta-bad382.netlify.app' },
+        { src: './Screenshot(11).png', alt: 'Screenshot (11)', link: 'https://dulcet-heliotrope-268b7a.netlify.app' },
+        { src: './Screenshot(12).png', alt: 'Screenshot (12)', link: 'https://precious-cascaron-44dee1.netlify.app' },
+        { src: './Screenshot(15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
       ],
       projectUrl: 'https://melodious-cajeta-bad382.netlify.app',
       githubUrl: 'https://github.com/chifavz/sample-project'
@@ -80,7 +83,6 @@ const Projects = () => {
                 </a>
               )}
             </div>
-
           </div>
         ))}
       </div>
@@ -96,15 +98,13 @@ const Projects = () => {
         </p>
       </section>
 
-     {projects.length === 0 && (
+      {projects.length === 0 && (
         <div className="no-projects">
           <p>No projects yet. <Link to="/projects/new">Add your first project!</Link></p>
         </div>
       )}
-
     </div>
   );
 };
 
 export default Projects;
-
