@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './style.css';
 
 const Projects = () => {
@@ -33,9 +32,6 @@ const Projects = () => {
     <div>
       <div className="projects-header">
         <h1>My Projects</h1>
-        <Link to="/projects/new" className="add-project-btn">
-          + Add New Project
-        </Link>
       </div>
 
       <div className="projects-grid">
@@ -100,7 +96,7 @@ const Projects = () => {
 
       {projects.length === 0 && (
         <div className="no-projects">
-          <p>No projects yet. <Link to="/projects/new">Add your first project!</Link></p>
+          <p>No projects to display yet.</p>
         </div>
       )}
     </div>
