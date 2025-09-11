@@ -1,19 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BlogPage = () => (
   <div>
-    <h2>Blog Page</h2>
+    <h2>Web Development & Affiliate Marketing Blog</h2>
     <p>
-      Visit my affiliate blog for reviews, tutorials, and guides:
+      Discover the latest tools, tutorials, and resources for web developers and entrepreneurs.
+      Read detailed reviews and guides on the best software, hosting, and services.
     </p>
-    <a
-      href="https://sparkly-semolina-6f0daa.netlify.app"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="btn-blog"
-    >
-      Go to Blog
-    </a>
+    <Link to="/blog" className="btn-blog">
+      Visit Our Blog
+    </Link>
   </div>
 );
 
