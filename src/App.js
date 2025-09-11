@@ -1,10 +1,9 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Projects from './components/Projects';
+import Showcase from './components/Showcase';
 import Contact from './components/Contact';
 import BlogLayout from './components/BlogLayout'; // Adjust the import path
 import './components/style.css';
@@ -18,7 +17,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/showcase" element={<Showcase />} />
             <Route path="/contact" element={<Contact />} />
 
             {/* Use Outlet to handle nested routes under /blog */}
