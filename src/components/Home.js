@@ -39,12 +39,7 @@ const Home = () => {
 <footer>
     <p>Contact us today to discuss your project and let's build something extraordinary together.</p>
 </footer>
-<ul>
-        <li>
-          <Link to="/blog/react-blog-post">Chifavz Blog Post</Link>
-        </li>
-        {/* Add more blog post links as needed */}
-      </ul>
+
 
     </div>
   );

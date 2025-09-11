@@ -6,7 +6,7 @@ const Projects = () => {
   const [projects] = useState([
     {
       id: 1,
-      title: 'Sample Project',
+      title: 'Project',
       description: 'A sample portfolio project showcasing web development skills',
       technologies: 'React, JavaScript, CSS',
       category: 'web-app',
