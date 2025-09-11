@@ -26,24 +26,25 @@ const NewProjectForm = ({ onSubmit }) => {
     setSubmissionStatus(null);
     
     try {
+      let success = false;
+      
       // If onSubmit prop is provided, use it (for testing or custom handling)
       if (onSubmit) {
         onSubmit(formData);
-        setSubmissionStatus('success');
+        success = true;
       } else {
         // Send to Netlify function for processing
         const response = await axios.post('/.netlify/functions/submitProject', formData);
         
         if (response.status === 200) {
-          setSubmissionStatus('success');
+          success = true;
           console.log('Project submitted successfully:', response.data);
-        } else {
-          setSubmissionStatus('error');
         }
       }
       
-      // Clear form after successful submission
-      if (submissionStatus !== 'error') {
+      if (success) {
+        setSubmissionStatus('success');
+        // Clear form after successful submission
         setFormData({
           title: '',
           description: '',
@@ -53,6 +54,8 @@ const NewProjectForm = ({ onSubmit }) => {
           category: '',
           imageUrl: ''
         });
+      } else {
+        setSubmissionStatus('error');
       }
     } catch (error) {
       console.error('Error submitting project:', error);

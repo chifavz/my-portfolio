@@ -9,6 +9,7 @@ const Contact = () => {
         message: '',
     });
     const [submissionStatus, setSubmissionStatus] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,6 +17,8 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true);
+        setSubmissionStatus(null);
 
         try {
             // Make a POST request to the Netlify Function endpoint
@@ -24,7 +27,7 @@ const Contact = () => {
             // Check the response and handle accordingly
             if (response.status === 200) {
                 setSubmissionStatus('success');
-                // Optionally, you can reset the form after a successful submission
+                // Reset the form after a successful submission
                 setFormData({
                     name: '',
                     email: '',
@@ -36,6 +39,8 @@ const Contact = () => {
         } catch (error) {
             console.error('Error submitting form:', error);
             setSubmissionStatus('error');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -55,6 +60,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
+                        disabled={isSubmitting}
                     />
 
                     {/* Email input */}
@@ -66,6 +72,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        disabled={isSubmitting}
                     />
 
                     {/* Message textarea */}
@@ -77,10 +84,13 @@ const Contact = () => {
                         onChange={handleChange}
                         rows="4"
                         required
+                        disabled={isSubmitting}
                     ></textarea>
 
                     {/* Submit button */}
-                    <button type="submit">Submit</button>
+                    <button type="submit" disabled={isSubmitting}>
+                        {isSubmitting ? 'Submitting...' : 'Submit'}
+                    </button>
 
                     {/* Submission status message */}
                     {submissionStatus === 'success' && (
