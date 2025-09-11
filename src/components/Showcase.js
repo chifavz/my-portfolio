@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
 
-const Projects = () => {
-  // Sample project data - in a real app this would come from an API or state management
+const Showcase = () => {
+  // Sample showcase data - in a real app this would come from an API or state management
   const [projects] = useState([
     {
       id: 1,
@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <div>
       <div className="projects-header">
-        <h1>My Projects</h1>
+        <h1>My Showcase</h1>
       </div>
 
       <div className="projects-grid">
@@ -84,23 +84,23 @@ const Projects = () => {
       </div>
 
       <section>
-        <h3>Featured Project</h3>
+        <h3>Featured Showcase</h3>
         <p>
-          Check out my latest project{' '}
+          Check out my latest showcase{' '}
           <a href={projectData.projectLink} target="_blank" rel="noopener noreferrer">
             here
           </a>
-          . This project showcases modern web development techniques and responsive design principles.
+          . This showcase demonstrates modern web development techniques and responsive design principles.
         </p>
       </section>
 
       {projects.length === 0 && (
         <div className="no-projects">
-          <p>No projects to display yet.</p>
+          <p>No showcase items to display yet.</p>
         </div>
       )}
     </div>
   );
 };
 
-export default Projects;
+export default Showcase;
