@@ -7,8 +7,8 @@ const Showcase = () => {
     {
       id: 1,
       title: 'Project',
-      description: 'A sample portfolio project showcasing web development skills',
-      technologies: 'React, JavaScript, CSS',
+      description: 'Personal project showcasing web development skills',
+      technologies: 'React, JavaScript, CSS , node,postgre,heroku',
       category: 'web-app',
       images: [
         { src: './Screenshot1.png', alt: 'Screenshot 1', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
@@ -17,6 +17,8 @@ const Showcase = () => {
         { src: './Screenshot (11).png', alt: 'Screenshot (11)', link: 'https://dulcet-heliotrope-268b7a.netlify.app' },
         { src: './Screenshot (12).png', alt: 'Screenshot (12)', link: 'https://precious-cascaron-44dee1.netlify.app' },
         { src: './Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
+        { src: './Screenshot (17).png', alt: 'Screenshot (18)', link: 'https://spiffy-puffpuff-f1466f.netlify.app/' },
+        {src: './Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
       ],
       projectUrl: 'https://melodious-cajeta-bad382.netlify.app',
       githubUrl: 'https://github.com/chifavz/sample-project'
@@ -73,11 +75,7 @@ const Showcase = () => {
                   View Live Project
                 </a>
               )}
-              {project.githubUrl && (
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-                  View on GitHub
-                </a>
-              )}
+             
             </div>
           </div>
         ))}

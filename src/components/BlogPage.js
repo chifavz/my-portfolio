@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BlogPage = () => (
   <div>
-    <h2>Web Development & Marketing Blog</h2>
+    <h2>Marketing Blog</h2>
     <p>
       Discover the latest tools, tutorials, and resources for creators and entrepreneurs.
       Read detailed reviews and guides on the best software, hosting, and services.

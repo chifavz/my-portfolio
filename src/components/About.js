@@ -8,7 +8,7 @@ const About = () => {
             
             <section>
                 <p>
-                    Hello! I'm <strong>Chifavz</strong>, a passionate and results-driven full stack engineer 
+                    Hello! I'm <strong>Chike.I</strong>, a passionate and results-driven full stack engineer 
                     based in Dallas, TX. I specialize in building <strong>MVP products</strong> from the ground up, 
                     helping ideas come to life with seamless user experiences and scalable backend systems.
                 </p>
