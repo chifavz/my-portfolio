@@ -24,9 +24,9 @@ const Showcase = () => {
     },
     {
       id: 3,
-      title: 'Task Management App',
-      description: 'Organize your work and life with this intuitive task tracker',
-      technologies: 'React, TypeScript, Firebase, Material-UI',
+      title: 'Map_prototype',
+      description: 'Interactive mapping application prototype with advanced visualization features',
+      technologies: 'React, Leaflet, OpenStreetMap, JavaScript',
       thumbnail: './Screenshot (12).png',
       projectUrl: 'https://precious-cascaron-44dee1.netlify.app',
       githubUrl: 'https://github.com/chifavz/sample-project'
