@@ -24,11 +24,20 @@ const Showcase = () => {
     },
     {
       id: 3,
-      title: 'geo- map',
-      description: 'Interactive geographic mapping application with advanced visualization features',
-      technologies: 'React, Leaflet, OpenStreetMap, JavaScript',
+      title: 'Task Management App',
+      description: 'Organize your work and life with this intuitive task tracker',
+      technologies: 'React, TypeScript, Firebase, Material-UI',
       thumbnail: './Screenshot (12).png',
       projectUrl: 'https://precious-cascaron-44dee1.netlify.app',
+      githubUrl: 'https://github.com/chifavz/sample-project'
+    },
+    {
+      id: 4,
+      title: 'geo-map',
+      description: 'Interactive geographic mapping application with advanced visualization features',
+      technologies: 'React, Leaflet, OpenStreetMap, JavaScript',
+      thumbnail: './Screenshot (15).png',
+      projectUrl: 'https://legendary-dango-395dc3.netlify.app',
       githubUrl: 'https://github.com/chifavz/sample-project'
     }
   ]);
