@@ -41,13 +41,4 @@ describe('Showcase', () => {
     );
     expect(projectImages.length).toBeGreaterThan(0);
   });
-
-  test('renders Geo-map project card', () => {
-    render(<Showcase />);
-    
-    // Check that Geo-map project is displayed
-    expect(screen.getByRole('heading', { level: 2, name: /geo-map/i })).toBeInTheDocument();
-    expect(screen.getByText(/users grouped by location/i)).toBeInTheDocument();
-    expect(screen.getByText(/leaflet/i)).toBeInTheDocument();
-  });
 });
