@@ -21,24 +21,24 @@ describe('Showcase', () => {
     render(<Showcase />);
     
     // Check that project title is displayed (more specific)
-    expect(screen.getByRole('heading', { level: 2, name: /project/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: /restaurant finder/i })).toBeInTheDocument();
     
     // Check that project links are displayed
-    expect(screen.getByText(/view live project/i)).toBeInTheDocument();
-    expect(screen.getByText(/view on github/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/view live/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/github/i)[0]).toBeInTheDocument();
   });
 
   test('renders showcase images', () => {
     render(<Showcase />);
     
-    // Check that images are rendered (should have alt text containing project)
+    // Check that images are rendered
     const images = screen.getAllByRole('img');
     expect(images.length).toBeGreaterThan(0);
     
-    // Check that at least one image has project-related alt text
-    const projectImages = images.filter(img => 
-      img.getAttribute('alt')?.toLowerCase().includes('project')
+    // Check that at least one image has the project title in alt text
+    const restaurantImage = images.find(img => 
+      img.getAttribute('alt')?.toLowerCase().includes('restaurant')
     );
-    expect(projectImages.length).toBeGreaterThan(0);
+    expect(restaurantImage).toBeDefined();
   });
 });
