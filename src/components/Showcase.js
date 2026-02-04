@@ -24,8 +24,8 @@ const Showcase = () => {
     },
     {
       id: 3,
-      title: 'Map_prototype',
-      description: 'Interactive mapping application prototype with advanced visualization features',
+      title: 'geo- map',
+      description: 'Interactive geographic mapping application with advanced visualization features',
       technologies: 'React, Leaflet, OpenStreetMap, JavaScript',
       thumbnail: './Screenshot (12).png',
       projectUrl: 'https://precious-cascaron-44dee1.netlify.app',
