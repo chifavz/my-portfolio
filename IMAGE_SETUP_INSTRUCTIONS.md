@@ -8,8 +8,9 @@ A reference to your geo-map prototype image has been added to the portfolio show
 ### 1. Locate Your Image
 Your image is currently at:
 ```
-C:\Users\chifa\OneDrive\Pictures\map_prototype
+C:\Users\<username>\OneDrive\Pictures\map_prototype
 ```
+(Replace `<username>` with your actual Windows username)
 
 ### 2. Rename and Copy the Image
 1. Copy your image file from the above location
