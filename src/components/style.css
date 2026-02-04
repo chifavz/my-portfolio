@@ -372,50 +372,121 @@
   /* Project grid layout */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
-    margin: 30px 0;
+    margin-bottom: 30px;
   }
   
-  .project-item {
+  /* Card Container */
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  /* 1. Thumbnail - Top Section */
+  .project-thumbnail {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+  
+  .project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover .project-thumbnail img {
+    transform: scale(1.05);
+  }
+  
+  /* 2. Title */
+  .project-card h2 {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 20px 10px;
+    line-height: 1.3;
+  }
+  
+  /* 3. Description */
+  .project-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 20px 15px;
+    flex-grow: 1;
+  }
+  
+  /* 4. Tech Tags */
+  .project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 20px 20px;
+  }
+  
+  .tech-tag {
+    background: #f0f0f0;
+    color: #444;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  /* 5. Action Buttons */
+  .project-actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 20px;
+    margin-top: auto;
+  }
+  
+  .btn-primary, .btn-secondary {
+    flex: 1;
+    padding: 10px 20px;
     text-align: center;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project-item h3 {
-    color: #2c3e50;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-  
-  .project-link {
-    display: inline-block;
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-    color: white !important;
     text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 25px;
+    border-radius: 6px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: 15px;
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
   }
   
-  .project-link:hover {
+  .btn-primary {
+    background: #000;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background: #333;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
-    color: white !important;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+  }
+  
+  .btn-secondary:hover {
+    background: #000;
+    color: #fff;
   }
   
   /* Responsive design */
@@ -538,84 +609,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 30px;
-  }
-  
-  .project-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  }
-  
-  .project-card h2 {
-    color: #000;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-  }
-  
-  .project-description {
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
-  
-  .project-technologies, .project-category {
-    margin-bottom: 10px;
-    font-size: 0.9em;
-  }
-  
-  .project-technologies strong, .project-category strong {
-    color: #000;
-  }
-  
-  .project-images {
-    margin: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-  }
-  
-  .project-images img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  
-  .project-images img:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  }
-  
-  .project-links {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  
-  .project-link {
-    background-color: #000;
-    color: #fff;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 3px;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-link:hover {
-    background-color: #333;
-    color: #fff;
   }
   
   .no-projects {

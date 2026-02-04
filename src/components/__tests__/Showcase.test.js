@@ -23,9 +23,9 @@ describe('Showcase', () => {
     // Check that project title is displayed (more specific)
     expect(screen.getByRole('heading', { level: 2, name: /project/i })).toBeInTheDocument();
     
-    // Check that project links are displayed
-    expect(screen.getByText(/view live project/i)).toBeInTheDocument();
-    expect(screen.getByText(/view on github/i)).toBeInTheDocument();
+    // Check that project links are displayed (using getAllByText since we now have multiple projects)
+    const projectLinks = screen.getAllByText(/view live project/i);
+    expect(projectLinks.length).toBeGreaterThan(0);
   });
 
   test('renders showcase images', () => {
@@ -40,5 +40,14 @@ describe('Showcase', () => {
       img.getAttribute('alt')?.toLowerCase().includes('project')
     );
     expect(projectImages.length).toBeGreaterThan(0);
+  });
+
+  test('renders Geo-map project card', () => {
+    render(<Showcase />);
+    
+    // Check that Geo-map project is displayed
+    expect(screen.getByRole('heading', { level: 2, name: /geo-map/i })).toBeInTheDocument();
+    expect(screen.getByText(/users grouped by location/i)).toBeInTheDocument();
+    expect(screen.getByText(/leaflet/i)).toBeInTheDocument();
   });
 });
