@@ -17,7 +17,6 @@ const Showcase = () => {
         { src: './Screenshot (11).png', alt: 'Screenshot (11)', link: 'https://dulcet-heliotrope-268b7a.netlify.app' },
         { src: './Screenshot (12).png', alt: 'Screenshot (12)', link: 'https://precious-cascaron-44dee1.netlify.app' },
         { src: './Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
-        { src: './Screenshot (17).png', alt: 'Screenshot (18)', link: 'https://spiffy-puffpuff-f1466f.netlify.app/' },
         {src: './Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
       ],
       projectUrl: 'https://melodious-cajeta-bad382.netlify.app',
@@ -30,6 +29,7 @@ const Showcase = () => {
       technologies: 'React, Leaflet, OpenStreetMap, JavaScript, Geolocation API',
       category: 'mapping',
       images: [
+        { src: './Screenshot (17).png', alt: 'Screenshot (17)', link: 'https://spiffy-puffpuff-f1466f.netlify.app/' },
         { src: './Screenshot (18).png', alt: 'Geo-map Screenshot', link: 'https://geo-map-users.netlify.app' },
       ],
       projectUrl: 'https://geo-map-users.netlify.app',
