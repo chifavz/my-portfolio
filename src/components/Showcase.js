@@ -11,13 +11,13 @@ const Showcase = () => {
       technologies: 'React, JavaScript, CSS , node,postgre,heroku',
       category: 'web-app',
       images: [
-        { src: './Screenshot1.png', alt: 'Screenshot 1', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
-        { src: './Screenshot2.png', alt: 'Screenshot 2', link: 'https://eclectic-gumption-1d4c5d.netlify.app' },
-        { src: './Screenshot3.png', alt: 'Screenshot 3', link: 'https://melodious-cajeta-bad382.netlify.app' },
-        { src: './Screenshot (11).png', alt: 'Screenshot (11)', link: 'https://dulcet-heliotrope-268b7a.netlify.app' },
-        { src: './Screenshot (12).png', alt: 'Screenshot (12)', link: 'https://precious-cascaron-44dee1.netlify.app' },
-        { src: './Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
-        {src: './Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
+        { src: '/Screenshot1.png', alt: 'Screenshot 1', link: 'https://gregarious-brigadeiros-edcc74.netlify.app' },
+        { src: '/Screenshot2.png', alt: 'Screenshot 2', link: 'https://eclectic-gumption-1d4c5d.netlify.app' },
+        { src: '/Screenshot3.png', alt: 'Screenshot 3', link: 'https://melodious-cajeta-bad382.netlify.app' },
+        { src: '/Screenshot (11).png', alt: 'Screenshot (11)', link: 'https://dulcet-heliotrope-268b7a.netlify.app' },
+        { src: '/Screenshot (12).png', alt: 'Screenshot (12)', link: 'https://precious-cascaron-44dee1.netlify.app' },
+        { src: '/Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
+        { src: '/Screenshot (15).png', alt: 'Screenshot (15)', link: 'https://legendary-dango-395dc3.netlify.app' },
       ],
       projectUrl: 'https://melodious-cajeta-bad382.netlify.app',
       githubUrl: 'https://github.com/chifavz/sample-project'
@@ -29,8 +29,8 @@ const Showcase = () => {
       technologies: 'React, Leaflet, OpenStreetMap, JavaScript, Geolocation API',
       category: 'mapping',
       images: [
-        { src: './Screenshot (17).png', alt: 'Screenshot (17)', link: 'https://spiffy-puffpuff-f1466f.netlify.app/' },
-        { src: './Screenshot (18).png', alt: 'Geo-map Screenshot', link: 'https://geo-map-users.netlify.app' },
+        { src: '/Screenshot (17).png', alt: 'Screenshot (17)', link: 'https://spiffy-puffpuff-f1466f.netlify.app/' },
+        { src: '/Screenshot (18).png', alt: 'Geo-map Screenshot', link: 'https://geo-map-users.netlify.app' },
       ],
       projectUrl: 'https://geo-map-users.netlify.app',
       githubUrl: 'https://github.com/chifavz/geo-map-project'
