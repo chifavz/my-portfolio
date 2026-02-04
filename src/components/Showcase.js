@@ -31,6 +31,7 @@ const Showcase = () => {
       images: [
         { src: './Screenshot (17).png', alt: 'Screenshot (17)', link: 'https://spiffy-puffpuff-f1466f.netlify.app/' },
         { src: './Screenshot (18).png', alt: 'Geo-map Screenshot', link: 'https://geo-map-users.netlify.app' },
+        { src: './map_prototype.png', alt: 'Geo-map Prototype', link: 'https://geo-map-users.netlify.app' },
       ],
       projectUrl: 'https://geo-map-users.netlify.app',
       githubUrl: 'https://github.com/chifavz/geo-map-project'
