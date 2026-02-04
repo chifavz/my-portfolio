@@ -22,6 +22,18 @@ const Showcase = () => {
       ],
       projectUrl: 'https://melodious-cajeta-bad382.netlify.app',
       githubUrl: 'https://github.com/chifavz/sample-project'
+    },
+    {
+      id: 2,
+      title: 'Geo-map',
+      description: 'Users grouped by location - Interactive mapping application for visualizing user distribution',
+      technologies: 'React, Leaflet, OpenStreetMap, JavaScript, Geolocation API',
+      category: 'mapping',
+      images: [
+        { src: './Screenshot (18).png', alt: 'Geo-map Screenshot', link: 'https://geo-map-users.netlify.app' },
+      ],
+      projectUrl: 'https://geo-map-users.netlify.app',
+      githubUrl: 'https://github.com/chifavz/geo-map-project'
     }
   ]);
 
